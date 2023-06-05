@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>String methods</caption>
+        <tr>
+            <th>Method</th>
+            <th>Operation</th>
+            <th>Example</th>
+            <th>Output</th>
+        </tr>
+
+        <tr>
+            <th>length</th>
+            <td>Calculates the length of the string</td>
+            <td>const animal = "tiger";<br>
+                document.write("Input string is " + animal);<br>
+                b = animal.length;<br>
+                document.write("string after applying the method is " + animal, <br>"return value is " + b);</td>
+            <td>Input string is tiger<br>
+                string after applying the method is tiger<br>
+                return value is 5<br></td>
+
+        </tr>
+        <tr>
+            <th rowspan="2">slice()</th>
+            <td rowspan="2">Slices of a part of string (Start-index number,End-Index number(not included)</td>
+            <td>const sent = "He is a tall boy";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.slice(5, 13);<br>
+                document.write("string after applying the method is :" + sent, <br>"return value is " + b);</td>
+            <td>Input string is He is a tall boy<br>
+                string after applying the method is :He is a tall boy<br>
+                return value is a tall<br></td>
+
+        </tr>
+
+        <tr>
+            <td>
+                const sent = "He is a tall boy";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.slice(-13, -8);<br>
+                document.write("string after applying the method is: " + sent,<br> "return value is: " + b);<br>
+            </td>
+            <td>
+                Input string is He is a tall boy<br>
+                string after applying the method is: He is a tall boy<br>
+                return value is: is a<br>
+            </td>
+        </tr>
+
+        <tr>
+            <th>substring()</th>
+            <td>similiar to slice but negative values taken as zero</td>
+            <td>const sent = "He is a tall boy";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.substring(-2, 13);<br>
+                document.write("string after applying the method is: " + sent, <br>"return value is: " + b);<br></td>
+            <td>Input string is He is a tall boy<br>
+                string after applying the method is: He is a tall boy<br>
+                return value is: He is a tall<br></td>
+
+        </tr>
+
+        <tr>
+            <th>substr()</th>
+            <td>similiar to splice in arrays(index position,elements to be removed) </td>
+            <td>const sent = "He is a tall boy";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.substr(4, 5);
+                document.write("string after applying the method is: " + sent, <br>"return value is: " + b);<br></td>
+            <td>Input string is He is a tall boy<br>
+                string after applying the method is: He is a tall boy<br>
+                return value is: s a t<br></td>
+
+        </tr>
+
+
+        <tr>
+            <th rowspan="3">replace()</th>
+            <td rowspan="3">Replace the character of the original string with desired characters </td>
+            <td>const sent = "He is a tall boy";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.replace("tall", "short");<br>
+                document.write("string after applying the method is: " + sent, <br>"return value is: " + b, "<br>");<br>
+                document.write(b[0]);<br></td>
+            <td>Input string is He is a tall boy<br>
+                string after applying the method is: He is a tall boy<br>
+                return value is: He is a short boy<br>
+                H<br></td>
+
+        </tr>
+
+        <tr>
+            <td>
+                const sent = "He is a tall boy";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.replace(/Tall/i, "short");<br>
+                document.write("string after applying the method is: " + sent, <br>"return value is: " + b);<br>
+            </td>
+            <td>
+                Input string is He is a tall boy<br>
+                string after applying the method is: He is a tall boy<br>
+                return value is: He is a short boy<br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                const sent = "He is a tall boy and taller";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.replace(/tall/g, "short");<br>
+                document.write("string after applying the method is: " + sent, <br>"return value is: " + b);<br>
+            </td>
+            <td>
+                Input string is He is a tall boy and taller<br>
+                string after applying the method is: He is a tall boy and taller<br>
+                return value is: He is a short boy and shorter<br>
+            </td>
+        </tr>
+
+        <tr>
+            <th>replaceAll()</th>
+            <td>Replace all the character of the original string with desired characters </td>
+            <td>const sent = "He is a tall boy and taller than tall";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.replaceAll("tall", "short");<br>
+                document.write("string after applying the method is: " + sent, <br>"return value is: " + b);<br></td>
+            <td>Input string is He is a tall boy and taller than tall<br>
+                string after applying the method is: He is a tall boy and taller than tall<br>
+                return value is: He is a short boy and shorter than short<br></td>
+
+        </tr>
+
+        <tr>
+            <th>toUpperCase()</th>
+            <td>Changes all the characters to uppercase </td>
+            <td>const sent = "He is a tall boy";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.toUpperCase()<br>
+                document.write("string after applying the method is: " + sent, <br>"return value is: " + b);
+                <br>
+            </td>
+            <td>Input string is He is a tall boy<br>
+                string after applying the method is: He is a tall boy<br>
+                return value is: HE IS A TALL BOY<br></td>
+
+        </tr>
+
+        <tr>
+            <th>toLowerCase()</th>
+            <td>Changes all the characters to lowercase </td>
+            <td>const sent = "HE IS A Tall BOY";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.toLowerCase();<br>
+                document.write("string after applying the method is: " + sent, <br>"return value is: " + b);
+                <br>
+            </td>
+            <td>Input string is HE IS A Tall BOY<br>
+                string after applying the method is: HE IS A Tall BOY<br>
+                return value is: he is a tall boy<br></td>
+
+        </tr>
+
+        <tr>
+            <th>concat()</th>
+            <td>Combines string characters </td>
+            <td>const sent = "HE IS A Tall";<br>
+                const sen = "boy";<br>
+                document.write("Input string is " + sent);<br>
+                b = sent.concat(" ", sen, " ", "and");<br>
+                document.write("string after applying the method is: " + sent, <br>"return value is: " + b);
+                <br>
+            </td>
+            <td>Input string is HE IS A Tall<br>
+                string after applying the method is: HE IS A Tall<br>
+                return value is: HE IS A Tall boy and<br></td>
+
+        </tr>
+
+        <tr>
+            <th>trim()</th>
+            <td>Trims the space at start and end of the string and not in between </td>
+            <td>const sent = " HE IS A Tall BOY ";<br>
+                document.write("Input string is " + sent);<br>
+                c = sent.length;<br>
+                document.write("Input string length is " + c);<br>
+                b = sent.trim()<br>
+                d = b.length;<br>
+                document.write("string after applying the method is: " + sent, <br>"return value is: " + b, "length
+                after trim is " + d);
+                <br>
+            </td>
+            <td>Input string is HE IS A Tall BOY<br>
+                Input string length is 38<br>
+                string after applying the method is: HE IS A Tall BOY<br>
+                return value is: HE IS A Tall BOY<br>
+                length after trim is 19<br></td>
+
+        </tr>
+
+        <tr>
+            <th>trimStart()</th>
+            <td>Trims the space at start of the string and not in between and end </td>
+            <td>const sent = " HE IS A Tall BOY ";<br>
+                document.write("Input string is " + sent);<br>
+                c = sent.length;<br>
+                document.write("Input string length is " + c);<br>
+                b = sent.trimStart();<br>
+                d = b.length;<br>
+                document.write("string after applying the method is: " + sent, "return <br>value is: " + b, "length<br>
+                after trimStart is " + d);
+
+                <br>
+            </td>
+            <td>Input string is HE IS A Tall BOY<br>
+                Input string length is 39<br>
+                string after applying the method is: HE IS A Tall BOY<br>
+                return value is: HE IS A Tall BOY<br>
+                length after trim is 30<br></td>
+
+        </tr>
+
+
+        <tr>
+            <th>trimEnd()</th>
+            <td>Trims the space at end of the string and not in between and start</td>
+            <td>const sent = " HE IS A Tall BOY ";<br>
+                document.write("Input string is " + sent);<br>
+                c = sent.length;<br>
+                document.write("Input string length is " + c);<br>
+                b = sent.trimEnd();<br>
+                d = b.length;<br>
+                document.write("string after applying the method is: " + sent, "return <br>value is: " + b, "length<br>
+                after trimStart is " + d);
+
+                <br>
+            </td>
+            <td>Input string is HE IS A Tall BOY<br>
+                Input string length is 33<br>
+                string after applying the method is: HE IS A Tall BOY<br>
+                return value is: HE IS A Tall BOY<br>
+                length after trim is 22<br></td>
+
+        </tr>
+
+
+        <tr>
+            <th>padStart()</th>
+            <td>Changes the string into desired length by adding characters at the start</td>
+            <td>const names = "Mar";<br>
+                document.write("Input string is " + names);<br>
+                b = names.padStart(7, "tie");<br>
+                document.write("string after applying the method is: " + names, <br>"return value is: " + b);
+                <br>
+            </td>
+            <td>Input string is Mar<br>
+                string after applying the method is: Mar<br>
+                return value is: tietMar<br></td>
+        </tr>
+
+        <tr>
+            <th>padEnd()</th>
+            <td>Changes the string into desired length by adding characters at the End</td>
+            <td>const names = "Mar";<br>
+                document.write("Input string is " + names);<br>
+                b = names.padEnd(7, -8);<br>
+                document.write("string after applying the method is: " + names, <br>"return value is: " + b);
+                <br>
+            </td>
+            <td>Input string is Mar<br>
+                string after applying the method is: Mar<br>
+                return value is: Mar-8-8<br></td>
+        </tr>
+
+        <tr>
+            <th>charAt()</th>
+            <td>Returns the character at the specified index(Returns empty if negative or unpresent index is given)</td>
+            <td>const names = "Martin";<br>
+                document.write("Input string is " + names);<br>
+                b = names.charAt(3);<br>
+                document.write("string after applying the method is: " + names, <br>"return value is: " + b);
+                <br>
+            </td>
+            <td>Input string is Martin<br>
+                string after applying the method is: Martin<br>
+                return value is: t<br></td>
+        </tr>
+
+        <tr>
+            <th>charCodeAt()</th>
+            <td>Returns the unicode of the character at the specified index(Returns NaN if negative or unpresent index
+                is given)</td>
+            <td>const names = "Martin";<br>
+                document.write("Input string is " + names);<br>
+                b = names.charCodeAt(3);<br>
+                document.write("string after applying the method is: " + names, <br>"return value is: " + b);
+                <br>
+            </td>
+            <td>Input string is Martin<br>
+                string after applying the method is: Martin<br>
+                return value is: 116<br></td>
+        </tr>
+
+        <tr>
+            <th rowspan="2">split()</th>
+            <td rowspan="2">Coverts string into arrays</td>
+            <td>const names = "Martin raju";<br>
+                document.write("Input string is " + names);<br>
+                b = names.split("");<br>
+                document.write("string after applying the method is: " + names, <br>"return value is: " + b, b[0]);
+                <br>
+            </td>
+            <td>Input string is Martin raju<br>
+                string after applying the method is: Martin raju<br>
+                return value is: M,a,r,t,i,n, ,r,a,j,u<br>
+                M<br></td>
+        </tr>
+
+        <tr>
+            <td>
+                const names = "Martin, raju";<br>
+                document.write("Input string is " + names);<br>
+                b = names.split(",");<br>
+                document.write("string after applying the method is: " + names, <br>"return value is: " + b, b[0]);<br>
+            </td>
+            <td>
+                Input string is Martin, raju<br>
+                string after applying the method is: Martin, raju<br>
+                return value is: Martin, raju<br>
+                Martin<br>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
